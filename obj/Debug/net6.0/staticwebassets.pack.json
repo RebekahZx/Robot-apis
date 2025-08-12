@@ -1,0 +1,73 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\images\\deakin-logo.png",
+      "PackagePath": "staticwebassets\\images\\deakin-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\styles\\robot.css",
+      "PackagePath": "staticwebassets\\styles\\robot.css"
+    },
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\styles\\theme-feeling-blue.css",
+      "PackagePath": "staticwebassets\\styles\\theme-feeling-blue.css"
+    },
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\styles\\theme-flattop.css",
+      "PackagePath": "staticwebassets\\styles\\theme-flattop.css"
+    },
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\styles\\theme-material.css",
+      "PackagePath": "staticwebassets\\styles\\theme-material.css"
+    },
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\styles\\theme-monokai.css",
+      "PackagePath": "staticwebassets\\styles\\theme-monokai.css"
+    },
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\styles\\theme-muted.css",
+      "PackagePath": "staticwebassets\\styles\\theme-muted.css"
+    },
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\styles\\theme-newspaper.css",
+      "PackagePath": "staticwebassets\\styles\\theme-newspaper.css"
+    },
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\styles\\theme-outline.css",
+      "PackagePath": "staticwebassets\\styles\\theme-outline.css"
+    },
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\swagger\\favicon-16x16.png",
+      "PackagePath": "staticwebassets\\swagger\\favicon-16x16.png"
+    },
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\swagger\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\swagger\\favicon-32x32.png"
+    },
+    {
+      "Id": "C:\\Users\\jayan\\Desktop\\Deakin\\BackendS\\6.1P\\task-resources\\robot-controller-api\\wwwroot\\swagger\\favicon.ico",
+      "PackagePath": "staticwebassets\\swagger\\favicon.ico"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.robot-controller-api.props",
+      "PackagePath": "build\\robot-controller-api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.robot-controller-api.props",
+      "PackagePath": "buildMultiTargeting\\robot-controller-api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.robot-controller-api.props",
+      "PackagePath": "buildTransitive\\robot-controller-api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.robot-controller-api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.robot-controller-api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

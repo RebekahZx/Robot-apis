@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>robot-controller-api</name>
+    </assembly>
+    <members>
+        <member name="M:robot_controller_api.Controllers.MapsController.GetAllMaps">
+            <summary>
+            Retrieves all maps.
+            </summary>
+            <returns>A list of all maps</returns>
+        </member>
+        <member name="M:robot_controller_api.Controllers.MapsController.GetSquareMaps">
+            <summary>
+            Retrieves maps where the number of rows is equal to the number of columns.
+            </summary>
+            <returns>A list of square maps</returns>
+        </member>
+        <member name="M:robot_controller_api.Controllers.MapsController.GetMapById(System.Int32)">
+            <summary>
+            Retrieves a specific map by its ID.
+            </summary>
+            <param name="id">The ID of the map</param>
+            <returns>A map with the specified ID, or a NotFound result if not found</returns>
+        </member>
+        <member name="M:robot_controller_api.Controllers.MapsController.UpdateMap(System.Int32,robot_controller_api.Map)">
+            <summary>
+            Updates an existing map.
+            </summary>
+            <param name="id">The ID of the map to update</param>
+            <param name="updatedMap">The updated map data</param>
+            <returns>No content if successful, NotFound if map doesn't exist</returns>
+        </member>
+        <member name="M:robot_controller_api.Controllers.MapsController.DeleteMap(System.Int32)">
+            <summary>
+            Deletes a map from the system.
+            </summary>
+            <param name="id">The ID of the map to delete</param>
+            <returns>No content if successful, NotFound if map doesn't exist</returns>
+        </member>
+        <member name="M:robot_controller_api.Controllers.MapsController.CheckCoordinate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Checks if the given coordinates are valid for a specific map.
+            </summary>
+            <param name="id">The ID of the map</param>
+            <param name="x">The x-coordinate to check</param>
+            <param name="y">The y-coordinate to check</param>
+            <returns>True if coordinates are within the map, BadRequest if coordinates are negative</returns>
+        </member>
+        <member name="M:robot_controller_api.Controllers.RobotCommandsController.GetAllRobotCommands">
+            <summary>
+            Retrieves all robot commands.
+            </summary>
+            <returns>A list of all robot commands</returns>
+        </member>
+        <member name="M:robot_controller_api.Controllers.RobotCommandsController.GetMoveCommands">
+            <summary>
+            Retrieves all move-related robot commands.
+            </summary>
+            <returns>A list of robot move commands</returns>
+        </member>
+        <member name="M:robot_controller_api.Controllers.RobotCommandsController.GetRobotCommandById(System.Int32)">
+            <summary>
+            Retrieves a specific robot command by its ID.
+            </summary>
+            <param name="id">The ID of the robot command</param>
+            <returns>The robot command with the specified ID, or NotFound if not found</returns>
+        </member>
+        <member name="M:robot_controller_api.Controllers.RobotCommandsController.UpdateRobotCommand(System.Int32,robot_controller_api.RobotCommand)">
+            <summary>
+            Updates an existing robot command.
+            </summary>
+            <param name="id">The ID of the robot command to update</param>
+            <param name="updatedCommand">The updated robot command data</param>
+            <returns>NoContent if the update was successful, NotFound if the command doesn't exist</returns>
+        </member>
+        <member name="M:robot_controller_api.Controllers.RobotCommandsController.DeleteRobotCommand(System.Int32)">
+            <summary>
+            Deletes a robot command by its ID.
+            </summary>
+            <param name="id">The ID of the robot command to delete</param>
+            <returns>NoContent if the deletion was successful, NotFound if the command doesn't exist</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:robot_controller_api.Map.Id" -->
+        <!-- Badly formed XML comment ignored for member "P:robot_controller_api.RobotCommand.Id" -->
+    </members>
+</doc>

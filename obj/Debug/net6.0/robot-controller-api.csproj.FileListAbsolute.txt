@@ -1,0 +1,152 @@
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.AssemblyInfoInputs.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.AssemblyInfo.cs
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.csproj.CoreCompileInputs.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\bin\Debug\net6.0\appsettings.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.staticwebassets.endpoints.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.exe
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.deps.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.runtimeconfig.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.pdb
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\scopedcss\bundle\robot-controller-api.styles.css
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.build.endpoints.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.robot-controller-api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.robot-controller-api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.build.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\refint\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.pdb
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.genruntimeconfig.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\ref\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\bin\Debug\net6.0\Npgsql.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.csproj.AssemblyReference.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources\task-resources\robot-controller-api\obj\Debug\net6.0\robot-co.046F2A72.Up2Date
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\bin\Debug\net6.0\appsettings.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.staticwebassets.endpoints.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.exe
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.deps.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.runtimeconfig.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.pdb
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\bin\Debug\net6.0\FastMember.Signed.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\bin\Debug\net6.0\Npgsql.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.csproj.AssemblyReference.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.AssemblyInfoInputs.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.AssemblyInfo.cs
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.csproj.CoreCompileInputs.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\scopedcss\bundle\robot-controller-api.styles.css
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.build.endpoints.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.robot-controller-api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.robot-controller-api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.build.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\robot-co.046F2A72.Up2Date
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\refint\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.pdb
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.genruntimeconfig.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\3.2P-resources - Copy\task-resources\robot-controller-api\obj\Debug\net6.0\ref\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\appsettings.json
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.staticwebassets.endpoints.json
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.exe
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.deps.json
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.runtimeconfig.json
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.pdb
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\FastMember.Signed.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Npgsql.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.csproj.AssemblyReference.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.AssemblyInfoInputs.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.AssemblyInfo.cs
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.csproj.CoreCompileInputs.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\scopedcss\bundle\robot-controller-api.styles.css
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.build.endpoints.json
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.robot-controller-api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.robot-controller-api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.build.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-co.046F2A72.Up2Date
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\refint\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.pdb
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.genruntimeconfig.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\obj\Debug\net6.0\ref\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.staticwebassets.runtime.json
+C:\Users\jayan\Desktop\Deakin\BackendS\5.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.xml
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.csproj.AssemblyReference.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.AssemblyInfoInputs.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.AssemblyInfo.cs
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.csproj.CoreCompileInputs.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\appsettings.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.staticwebassets.endpoints.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\swagger.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.staticwebassets.runtime.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.exe
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.deps.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.runtimeconfig.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.pdb
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\robot-controller-api.xml
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\FastMember.Signed.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Npgsql.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\scopedcss\bundle\robot-controller-api.styles.css
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.build.endpoints.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.robot-controller-api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.robot-controller-api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.build.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.robot-controller-api.props
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-co.046F2A72.Up2Date
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\refint\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.pdb
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\robot-controller-api.genruntimeconfig.cache
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\obj\Debug\net6.0\ref\robot-controller-api.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Isopoh.Cryptography.Argon2.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Isopoh.Cryptography.Blake2b.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Isopoh.Cryptography.SecureArray.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Konscious.Security.Cryptography.Argon2.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Konscious.Security.Cryptography.Blake2.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Local.postman_environment.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Minimal-robot-api.postman_collection.json
+C:\Users\jayan\Desktop\Deakin\BackendS\6.1P\task-resources\robot-controller-api\bin\Debug\net6.0\Minimal-robot-api.postman_test_run.json

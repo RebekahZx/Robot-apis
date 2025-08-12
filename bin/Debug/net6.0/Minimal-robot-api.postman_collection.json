@@ -1,0 +1,1061 @@
+{
+	"info": {
+		"_postman_id": "0693c44c-b647-43cd-8430-fc8d033fd1e8",
+		"name": "Minimal-robot-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40246910"
+	},
+	"item": [
+		{
+			"name": "r\\robot",
+			"item": [
+				{
+					"name": "Get all commands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an(\"array\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Each item has required fields\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    jsonData.forEach(function (command) {\r",
+									"        pm.expect(command).to.have.property(\"id\");\r",
+									"        pm.expect(command).to.have.property(\"name\");\r",
+									"        pm.expect(command).to.have.property(\"description\");\r",
+									"        pm.expect(command).to.have.property(\"isMoveCommand\");\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7166/api/robot-commands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"robot-commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new command",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is not an error\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response text matches success message\", function () {\r",
+									"    const expectedMsg = \"Command added successfully.\";\r",
+									"    const actualMsg = pm.response.text();\r",
+									"    console.log(\"Response message:\", actualMsg);\r",
+									"    pm.expect(actualMsg).to.eql(expectedMsg);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Name\": \"Dark\",\r\n  \"description\": \"Star\",\r\n  \"isMoveCommand\": false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7166/api/robot-commands",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"robot-commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get command by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is OK\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Extract ID from Location header and store\", function () {\r",
+									"    const locationHeader = pm.response.headers.get(\"Location\");\r",
+									"\r",
+									"    pm.expect(locationHeader).to.not.be.null;\r",
+									"\r",
+									"    if (locationHeader) {\r",
+									"        const idMatch = locationHeader.match(/\\/(\\d+)$/);\r",
+									"        pm.expect(idMatch).to.not.be.null;\r",
+									"\r",
+									"        const extractedId = idMatch[1];\r",
+									"        pm.environment.set(\"robot-command-id\", extractedId);\r",
+									"        console.log(\"Extracted robot command ID:\", extractedId);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Robot command contains necessary fields\", function () {\r",
+									"    var command = pm.response.json();\r",
+									"    pm.expect(command).to.have.property(\"id\");\r",
+									"    pm.expect(command).to.have.property(\"name\");\r",
+									"    pm.expect(command).to.have.property(\"description\");\r",
+									"    pm.expect(command).to.have.property(\"isMoveCommand\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7166/api/robot-commands/57",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"robot-commands",
+								"57"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put command by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status is 204 No Content\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"No response body\", function () {\r",
+									"    pm.expect(pm.response.text()).to.equal('');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"MAx\",\r\n  \"description\": \"NO\",\r\n  \"isMoveCommand\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7166/api/robot-commands/57",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"robot-commands",
+								"57"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "BRAVO",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "NO",
+									"disabled": true
+								},
+								{
+									"key": "isMoveCommand",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all move commands",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 200 OK\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response is a JSON array\", function () {\r",
+									"    const body = pm.response.json();\r",
+									"    pm.expect(body).to.be.an(\"array\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"All commands have isMoveCommand set to true\", function () {\r",
+									"    const commands = pm.response.json();\r",
+									"    commands.forEach(cmd => {\r",
+									"        pm.expect(cmd).to.have.property(\"isMoveCommand\", true);\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Each command contains required fields\", function () {\r",
+									"    const commands = pm.response.json();\r",
+									"    commands.forEach(cmd => {\r",
+									"        pm.expect(cmd).to.have.property(\"id\");\r",
+									"        pm.expect(cmd).to.have.property(\"name\");\r",
+									"        pm.expect(cmd).to.have.property(\"description\");\r",
+									"        pm.expect(cmd).to.have.property(\"isMoveCommand\");\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7166/api/robot-commands/move",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"robot-commands",
+								"move"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete command by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is No Content\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"No content in response\", function () {\r",
+									"    pm.expect(pm.response.text()).to.equal(\"\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7166/api/robot-commands/57",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"robot-commands",
+								"57"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Map",
+			"item": [
+				{
+					"name": "Get all maps",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Maps array returned\", function () {\r",
+									"    const maps = pm.response.json();\r",
+									"    pm.expect(maps).to.be.an(\"array\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7166/api/maps",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"maps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new map ",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Map creation returns 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Created map includes props\", function () {\r",
+									"    const map = pm.response.json();\r",
+									"    pm.expect(map).to.have.property(\"name\");\r",
+									"    pm.expect(map).to.have.property(\"rows\");\r",
+									"    pm.expect(map).to.have.property(\"columns\");\r",
+									"    pm.expect(map).to.have.property(\"id\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Brisbane\",\r\n  \"rows\": 33,\r\n  \"columns\": 15,\r\n  \"description\": \"  map\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7166/api/maps",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"maps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all square maps",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Map creation returns 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Created map includes name and grid\", function () {\r",
+									"    const map = pm.response.json();\r",
+									"    pm.expect(map).to.have.property(\"name\");\r",
+									"    pm.expect(map).to.have.property(\"grid\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7166/api/maps/square",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"maps",
+								"square"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get map by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Returns 200 for specific map\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Map includes prop 1\", function () {\r",
+									"    const map = pm.response.json();\r",
+									"    pm.expect(map).to.have.property(\"id\");\r",
+									"    pm.expect(map).to.have.property(\"rows\");\r",
+									"    pm.expect(map).to.have.property(\"columns\");\r",
+									"    pm.expect(map).to.have.property(\"id\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Map includes id, name, grid\", function () {\r",
+									"    const map = pm.response.json();\r",
+									"    pm.expect(map).to.have.property(\"description\");\r",
+									"    pm.expect(map).to.have.property(\"createdDate\");\r",
+									"    pm.expect(map).to.have.property(\"modifiedDate\");\r",
+									"   \r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7166/api/maps/41",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"maps",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit map",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Returns 204 after updating map\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"PUT returns no content\", function () {\r",
+									"    pm.expect(pm.response.text()).to.equal('');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"New Brisbane\",\r\n  \"rows\": 10,\r\n  \"columns\": 9,\r\n  \"description\": \" map\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7166/api/maps/41",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"maps",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete map",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Returns 204 after deleting map\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"No content in response\", function () {\r",
+									"    pm.expect(pm.response.text()).to.equal(\"\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7166/api/maps/41",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"maps",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check if valid coordinates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response is boolean\", function () {\r",
+									"    const result = pm.response.json();\r",
+									"    pm.expect(typeof result).to.eql(\"boolean\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7166/api/maps/9/1000-1110",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"api",
+								"maps",
+								"9",
+								"1000-1110"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201 Created\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"const user = pm.response.json();\r",
+									"\r",
+									"pm.test(\"User is created with ID\", function () {\r",
+									"    pm.expect(user.id).to.be.a(\"number\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response includes user email\", function () {\r",
+									"    pm.expect(user.email).to.eql(pm.request.body && pm.request.body.raw ? JSON.parse(pm.request.body.raw).email : undefined);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin00@example.com\",\r\n    \"firstName\": \"abc\",\r\n    \"lastName\": \"Anv\",\r\n    \"passwordHash\": \"password\",\r\n    \"description\": \"A new \",\r\n    \"role\": \"developer\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7166/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should be JSON\", function () {\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an array of users\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an(\"array\");\r",
+									"\r",
+									"    if (jsonData.length > 0) {\r",
+									"        pm.expect(jsonData[0]).to.have.all.keys(\"id\", \"email\", \"firstName\", \"lastName\", \"passwordHash\", \"description\", \"role\", \"createdDate\", \"modifiedDate\");\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7166/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ALL admins",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Only admin users are returned\", function () {\r",
+									"    const users = pm.response.json();\r",
+									"    users.forEach(user => {\r",
+									"        pm.expect(user.role).to.eql(\"Admin\");\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7166/users/admin",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"users",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response has all user fields\", function () {\r",
+									"    const user = pm.response.json();\r",
+									"    pm.expect(user).to.have.all.keys(\"id\", \"email\", \"firstName\", \"lastName\", \"passwordHash\", \"description\", \"role\", \"createdDate\", \"modifiedDate\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7166/users/12",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"users",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status is 204 No Content\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"pm.test(\"No content after delete\", function () {\r",
+									"    pm.expect(pm.response.text()).to.equal('');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7166/users/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status is 204 No Content\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"pm.test(\"No response body\", function () {\r",
+									"    pm.expect(pm.response.text()).to.be.empty;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"newjay\",\r\n  \"lastName\": \"newlastname\",\r\n  \"description\": \"Updated description\"\r\n  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7166/users/12",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"users",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status is 204 No Content\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"pm.test(\"Patch successful\", function () {\r",
+									"    pm.expect(pm.response.text()).to.equal('');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"newuser12@example.com\",\r\n  \"password\": \"newpassword1234\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7166/users/12",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7166",
+							"path": [
+								"users",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "password",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin@example.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

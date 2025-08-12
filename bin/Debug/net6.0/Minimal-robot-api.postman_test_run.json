@@ -1,0 +1,810 @@
+{
+	"id": "bf2c16d6-e6f6-4a78-9c75-b41493f67a88",
+	"name": "Minimal-robot-api",
+	"timestamp": "2025-05-25T13:37:16.103Z",
+	"collection_id": "40246910-0693c44c-b647-43cd-8430-fc8d033fd1e8",
+	"folder_id": 0,
+	"environment_id": "40246910-a2f4a8af-6876-413f-ab91-bb2d03d66936",
+	"totalPass": 45,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-05-25T13:37:12.776Z",
+	"totalFail": 3,
+	"results": [
+		{
+			"id": "c7600560-e7b5-4936-b579-5b5f10c91067",
+			"name": "Get all commands",
+			"url": "https://localhost:7166/api/robot-commands",
+			"time": 359,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true,
+				"Response is an array": true,
+				"Each item has required fields": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Each item has required fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				359
+			],
+			"allTests": [
+				{
+					"Status code 200": true,
+					"Response is an array": true,
+					"Each item has required fields": true
+				}
+			]
+		},
+		{
+			"id": "f7152cb1-122a-45ea-be64-e62d3d77ee00",
+			"name": "Add new command",
+			"url": "https://localhost:7166/api/robot-commands",
+			"time": 18,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is not an error": true,
+				"Response text matches success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not an error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response text matches success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is not an error": true,
+					"Response text matches success message": true
+				}
+			]
+		},
+		{
+			"id": "884bb9a0-76ef-4d92-9c7e-5a07a8beb394",
+			"name": "Get command by ID",
+			"url": "https://localhost:7166/api/robot-commands/57",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is OK": true,
+				"Extract ID from Location header and store": true,
+				"Robot command contains necessary fields": true
+			},
+			"testPassFailCounts": {
+				"Status code is OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Extract ID from Location header and store": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Robot command contains necessary fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is OK": true,
+					"Extract ID from Location header and store": true,
+					"Robot command contains necessary fields": true
+				}
+			]
+		},
+		{
+			"id": "f55c6092-9efc-40bb-b799-9f610f599a1b",
+			"name": "Put command by ID",
+			"url": "https://localhost:7166/api/robot-commands/57",
+			"time": 10,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status is 204 No Content": true,
+				"No response body": true
+			},
+			"testPassFailCounts": {
+				"Status is 204 No Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No response body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status is 204 No Content": true,
+					"No response body": true
+				}
+			]
+		},
+		{
+			"id": "420c6ff1-e835-4428-9283-7cc594bca613",
+			"name": "Get all move commands",
+			"url": "https://localhost:7166/api/robot-commands/move",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 OK": true,
+				"Response is a JSON array": true,
+				"All commands have isMoveCommand set to true": true,
+				"Each command contains required fields": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is a JSON array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All commands have isMoveCommand set to true": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Each command contains required fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200 OK": true,
+					"Response is a JSON array": true,
+					"All commands have isMoveCommand set to true": true,
+					"Each command contains required fields": true
+				}
+			]
+		},
+		{
+			"id": "c0d19d50-b614-421f-aa70-edceaa61af79",
+			"name": "Delete command by ID",
+			"url": "https://localhost:7166/api/robot-commands/57",
+			"time": 5,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is No Content": true,
+				"No content in response": true
+			},
+			"testPassFailCounts": {
+				"Status code is No Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No content in response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is No Content": true,
+					"No content in response": true
+				}
+			]
+		},
+		{
+			"id": "0354bd7e-db51-4e73-84d6-776ced528f5f",
+			"name": "Get all maps",
+			"url": "https://localhost:7166/api/maps",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Maps array returned": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Maps array returned": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Maps array returned": true
+				}
+			]
+		},
+		{
+			"id": "aa6b3b81-a8db-46b8-8fbc-8f876410120c",
+			"name": "Create new map ",
+			"url": "https://localhost:7166/api/maps",
+			"time": 11,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Map creation returns 201": true,
+				"Created map includes props": true
+			},
+			"testPassFailCounts": {
+				"Map creation returns 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Created map includes props": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Map creation returns 201": true,
+					"Created map includes props": true
+				}
+			]
+		},
+		{
+			"id": "3aed3d7a-deba-4af2-9525-b28ec656f61c",
+			"name": "Get all square maps",
+			"url": "https://localhost:7166/api/maps/square",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Map creation returns 200": true,
+				"Created map includes name and grid": false
+			},
+			"testPassFailCounts": {
+				"Map creation returns 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Created map includes name and grid": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Map creation returns 200": true,
+					"Created map includes name and grid": false
+				}
+			]
+		},
+		{
+			"id": "05c3557e-76fa-4b15-9123-4c35ba6cca8f",
+			"name": "Get map by id",
+			"url": "https://localhost:7166/api/maps/41",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Returns 200 for specific map": true,
+				"Map includes prop 1": true,
+				"Map includes id, name, grid": true
+			},
+			"testPassFailCounts": {
+				"Returns 200 for specific map": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Map includes prop 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Map includes id, name, grid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Returns 200 for specific map": true,
+					"Map includes prop 1": true,
+					"Map includes id, name, grid": true
+				}
+			]
+		},
+		{
+			"id": "ac9b69d0-46cf-401c-ad9a-c79900a8eceb",
+			"name": "Edit map",
+			"url": "https://localhost:7166/api/maps/41",
+			"time": 5,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Returns 204 after updating map": true,
+				"PUT returns no content": true
+			},
+			"testPassFailCounts": {
+				"Returns 204 after updating map": {
+					"pass": 1,
+					"fail": 0
+				},
+				"PUT returns no content": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Returns 204 after updating map": true,
+					"PUT returns no content": true
+				}
+			]
+		},
+		{
+			"id": "96cb2216-934b-44ed-b393-35b94eca1d6e",
+			"name": "Delete map",
+			"url": "https://localhost:7166/api/maps/41",
+			"time": 5,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Returns 204 after deleting map": true,
+				"No content in response": true
+			},
+			"testPassFailCounts": {
+				"Returns 204 after deleting map": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No content in response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Returns 204 after deleting map": true,
+					"No content in response": true
+				}
+			]
+		},
+		{
+			"id": "89ed8c62-60be-4805-9894-777ff43d6b65",
+			"name": "Check if valid coordinates",
+			"url": "https://localhost:7166/api/maps/9/1000-1110",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is boolean": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is boolean": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is boolean": true
+				}
+			]
+		},
+		{
+			"id": "f2ec66a0-7b2f-4b43-a81c-54c1d5a332b0",
+			"name": "Register",
+			"url": "https://localhost:7166/users",
+			"time": 10,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201 Created": true,
+				"User is created with ID": true,
+				"Response includes user email": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User is created with ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response includes user email": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 201 Created": true,
+					"User is created with ID": true,
+					"Response includes user email": true
+				}
+			]
+		},
+		{
+			"id": "d25ef6ef-93c7-415f-92b0-b29bb999056f",
+			"name": "Get all users",
+			"url": "https://localhost:7166/users",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response should be JSON": true,
+				"Response is an array of users": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an array of users": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response should be JSON": true,
+					"Response is an array of users": true
+				}
+			]
+		},
+		{
+			"id": "43a323a4-884a-4fe6-8c14-62a9527dab13",
+			"name": "ALL admins",
+			"url": "https://localhost:7166/users/admin",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Only admin users are returned": true,
+				"Status is 200": true
+			},
+			"testPassFailCounts": {
+				"Only admin users are returned": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Only admin users are returned": true,
+					"Status is 200": true
+				}
+			]
+		},
+		{
+			"id": "f3dad018-8c3d-47fa-9dba-7909079318f8",
+			"name": "Get user by id",
+			"url": "https://localhost:7166/users/12",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response has all user fields": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has all user fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response has all user fields": true
+				}
+			]
+		},
+		{
+			"id": "afce1d70-ec8a-4242-bdec-204de6009152",
+			"name": "Delete by id",
+			"url": "https://localhost:7166/users/4",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status is 204 No Content": false,
+				"No content after delete": false
+			},
+			"testPassFailCounts": {
+				"Status is 204 No Content": {
+					"pass": 0,
+					"fail": 1
+				},
+				"No content after delete": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status is 204 No Content": false,
+					"No content after delete": false
+				}
+			]
+		},
+		{
+			"id": "7d513868-2b5c-492c-92d5-0ad1e48f08f7",
+			"name": "Update details",
+			"url": "https://localhost:7166/users/12",
+			"time": 8,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status is 204 No Content": true,
+				"No response body": true
+			},
+			"testPassFailCounts": {
+				"Status is 204 No Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No response body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status is 204 No Content": true,
+					"No response body": true
+				}
+			]
+		},
+		{
+			"id": "4e6f8279-7e7a-4133-871e-fb79fdae4155",
+			"name": "Patch details",
+			"url": "https://localhost:7166/users/12",
+			"time": 5,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status is 204 No Content": true,
+				"Patch successful": true
+			},
+			"testPassFailCounts": {
+				"Status is 204 No Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Patch successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status is 204 No Content": true,
+					"Patch successful": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 494,
+	"collection": {
+		"requests": [
+			{
+				"id": "c7600560-e7b5-4936-b579-5b5f10c91067",
+				"method": "GET"
+			},
+			{
+				"id": "f7152cb1-122a-45ea-be64-e62d3d77ee00",
+				"method": "POST"
+			},
+			{
+				"id": "884bb9a0-76ef-4d92-9c7e-5a07a8beb394",
+				"method": "GET"
+			},
+			{
+				"id": "f55c6092-9efc-40bb-b799-9f610f599a1b",
+				"method": "PUT"
+			},
+			{
+				"id": "420c6ff1-e835-4428-9283-7cc594bca613",
+				"method": "GET"
+			},
+			{
+				"id": "c0d19d50-b614-421f-aa70-edceaa61af79",
+				"method": "DELETE"
+			},
+			{
+				"id": "0354bd7e-db51-4e73-84d6-776ced528f5f",
+				"method": "GET"
+			},
+			{
+				"id": "aa6b3b81-a8db-46b8-8fbc-8f876410120c",
+				"method": "POST"
+			},
+			{
+				"id": "3aed3d7a-deba-4af2-9525-b28ec656f61c",
+				"method": "GET"
+			},
+			{
+				"id": "05c3557e-76fa-4b15-9123-4c35ba6cca8f",
+				"method": "GET"
+			},
+			{
+				"id": "ac9b69d0-46cf-401c-ad9a-c79900a8eceb",
+				"method": "PUT"
+			},
+			{
+				"id": "96cb2216-934b-44ed-b393-35b94eca1d6e",
+				"method": "DELETE"
+			},
+			{
+				"id": "89ed8c62-60be-4805-9894-777ff43d6b65",
+				"method": "GET"
+			},
+			{
+				"id": "f2ec66a0-7b2f-4b43-a81c-54c1d5a332b0",
+				"method": "POST"
+			},
+			{
+				"id": "d25ef6ef-93c7-415f-92b0-b29bb999056f",
+				"method": "GET"
+			},
+			{
+				"id": "43a323a4-884a-4fe6-8c14-62a9527dab13",
+				"method": "GET"
+			},
+			{
+				"id": "f3dad018-8c3d-47fa-9dba-7909079318f8",
+				"method": "GET"
+			},
+			{
+				"id": "afce1d70-ec8a-4242-bdec-204de6009152",
+				"method": "DELETE"
+			},
+			{
+				"id": "7d513868-2b5c-492c-92d5-0ad1e48f08f7",
+				"method": "PUT"
+			},
+			{
+				"id": "4e6f8279-7e7a-4133-871e-fb79fdae4155",
+				"method": "PATCH"
+			}
+		]
+	}
+}
