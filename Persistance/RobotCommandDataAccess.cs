@@ -5,8 +5,7 @@ using Npgsql;
  {
  // Connection string is usually set in a config file for the ease
 //of change.
- private const string CONNECTION_STRING ="Host=localhost;Username=postgres;Password=12345;Database=sit331";
-//  private static string CONNECTION_STRING = Environment.GetEnvironmentVariable("DefaultConnection");
+ private static string CONNECTION_STRING => Db.ConnectionString;
 
  public static List<RobotCommand> GetRobotCommands()
  {

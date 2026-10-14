@@ -11,7 +11,7 @@ namespace robot_controller_api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly string _connectionString = "Host=localhost;Username=postgres;Password=12345;Database=sit331";
+        private readonly string _connectionString = robot_controller_api.Persistence.Db.ConnectionString;
         private readonly PasswordService _passwordService;
 
         public UserController(PasswordService passwordService)
@@ -19,6 +19,7 @@ namespace robot_controller_api.Controllers
             _passwordService = passwordService;
         }
 
+        [Authorize(Policy = "AdminOnly")]
         [HttpGet]
         public ActionResult<IEnumerable<UserModel>> GetAllUsers()
         {
@@ -37,7 +38,6 @@ namespace robot_controller_api.Controllers
                     Email = reader.GetString(1),
                     FirstName = reader.GetString(2),
                     LastName = reader.GetString(3),
-                    PasswordHash = reader.GetString(4),
                     Description = reader.GetString(5),
                     Role = reader.GetString(6),
                     CreatedDate = reader.GetDateTime(7),
@@ -48,6 +48,7 @@ namespace robot_controller_api.Controllers
             return Ok(users);
         }
 
+        [Authorize(Policy = "AdminOnly")]
         [HttpGet("admin")]
         // [Authorize(Policy = "AdminOnly")]
         public ActionResult<IEnumerable<UserModel>> GetUsersByRole()
@@ -68,7 +69,6 @@ namespace robot_controller_api.Controllers
                     Email = reader.GetString(1),
                     FirstName = reader.GetString(2),
                     LastName = reader.GetString(3),
-                    PasswordHash = reader.GetString(4),
                     Description = reader.GetString(5),
                     Role = reader.GetString(6),
                     CreatedDate = reader.GetDateTime(7),
@@ -79,6 +79,7 @@ namespace robot_controller_api.Controllers
             return Ok(users);
         }
 
+        [Authorize(Policy = "AdminOnly")]
         [HttpGet("{id}")]
         public ActionResult<UserModel> GetUserById(int id)
         {
@@ -98,7 +99,6 @@ namespace robot_controller_api.Controllers
                     Email = reader.GetString(1),
                     FirstName = reader.GetString(2),
                     LastName = reader.GetString(3),
-                    PasswordHash = reader.GetString(4),
                     Description = reader.GetString(5),
                     Role = reader.GetString(6),
                     CreatedDate = reader.GetDateTime(7),
@@ -119,6 +119,8 @@ namespace robot_controller_api.Controllers
             using var connection = new NpgsqlConnection(_connectionString);
             connection.Open();
 
+            if (string.IsNullOrEmpty(user.PasswordHash))
+                return BadRequest("Password is required.");
             string passwordHash = _passwordService.HashPassword(user.PasswordHash);
 
             var command = new NpgsqlCommand(@"
@@ -131,11 +133,15 @@ namespace robot_controller_api.Controllers
             command.Parameters.AddWithValue("@LastName", user.LastName);
             command.Parameters.AddWithValue("@PasswordHash", passwordHash);
             command.Parameters.AddWithValue("@Description", user.Description ?? string.Empty);
-            command.Parameters.AddWithValue("@Role", user.Role ?? "User");
+            // Only an authenticated admin may create another admin.
+            var role = User.IsInRole("Admin") ? (user.Role ?? "User") : "User";
+            command.Parameters.AddWithValue("@Role", role);
             command.Parameters.AddWithValue("@CreatedDate", DateTime.UtcNow);
             command.Parameters.AddWithValue("@ModifiedDate", DateTime.UtcNow);
 
-            user.Id = (int)command.ExecuteScalar();
+            user.Id = (int)command.ExecuteScalar()!;
+            user.Role = role;
+            user.PasswordHash = null;
 
             return CreatedAtAction(nameof(GetUserById), new { id = user.Id }, user);
         }
@@ -169,6 +175,7 @@ namespace robot_controller_api.Controllers
             return NoContent();
         }
 
+        [Authorize(Policy = "AdminOnly")]
         [HttpDelete("{id}")]
         // [Authorize(Policy = "AdminOnly")]
         public IActionResult DeleteUser(int id)

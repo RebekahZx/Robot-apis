@@ -10,7 +10,9 @@ namespace robot_controller_api.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         
-        public string PasswordHash { get; set; }
+        /// <summary>Plain password on create; never included in responses.</summary>
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? PasswordHash { get; set; }
         public string? Description { get; set; }
         public string? Role { get; set; }
         public DateTime CreatedDate { get; set; }

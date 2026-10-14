@@ -4,7 +4,7 @@ namespace robot_controller_api.Persistence
 {
     public static class MapDataAccess
     {
-        private const string CONNECTION_STRING = "Host=localhost;Username=postgres;Password=12345;Database=sit331";
+        private static string CONNECTION_STRING => Db.ConnectionString;
 
         public static List<Map> GetMaps()
         {
