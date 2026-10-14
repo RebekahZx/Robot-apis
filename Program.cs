@@ -7,6 +7,12 @@ using robot_controller_api.AuthUtils;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Secrets come from user secrets (development) or environment variables, not appsettings.json.
+robot_controller_api.Persistence.Db.ConnectionString =
+    builder.Configuration.GetConnectionString("DefaultConnection")
+    ?? throw new InvalidOperationException(
+        "Missing ConnectionStrings:DefaultConnection. See README: Configuration.");
+
 // Add services to the container
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

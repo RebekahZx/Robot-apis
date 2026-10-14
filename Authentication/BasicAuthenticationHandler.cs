@@ -21,7 +21,7 @@
 // {
 //     //     public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
 //     //     {
-//             private readonly string _connectionString = "Host=localhost;Username=postgres;Password=12345;Database=sit331";
+//             private readonly string _connectionString = robot_controller_api.Persistence.Db.ConnectionString;
 //             // private readonly IConfiguration _configuration;  
 
 
@@ -226,7 +226,7 @@ namespace robot_controller_api.Authentication
 {
     public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {
-        private readonly string _connectionString = "Host=localhost;Username=postgres;Password=12345;Database=sit331";
+        private readonly string _connectionString = robot_controller_api.Persistence.Db.ConnectionString;
         private readonly IConfiguration _configuration;
 
         public BasicAuthenticationHandler(

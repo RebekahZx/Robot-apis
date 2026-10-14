@@ -64,8 +64,10 @@ namespace robot_controller_api.AuthUtils
 
     public PasswordService(IConfiguration config)
     {
-        _pepper = config["AppSettings:Pepper"];
-        _salt = config["AppSettings:Salt"];
+        _pepper = config["AppSettings:Pepper"]
+            ?? throw new InvalidOperationException("Missing AppSettings:Pepper. See README: Configuration.");
+        _salt = config["AppSettings:Salt"]
+            ?? throw new InvalidOperationException("Missing AppSettings:Salt. See README: Configuration.");
     }
 
     public string HashPassword(string plainPassword)

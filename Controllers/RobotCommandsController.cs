@@ -50,6 +50,7 @@ public class RobotCommandsController : ControllerBase
     }
 
 
+    [Authorize(Policy = "UserOnly")]
     [HttpPost]
     // [Authorize(Policy = "AdminOnly")]
     public IActionResult AddRobotCommand(RobotCommand newCommand)
@@ -72,6 +73,7 @@ public class RobotCommandsController : ControllerBase
     /// <param name="id">The ID of the robot command to update</param>
     /// <param name="updatedCommand">The updated robot command data</param>
     /// <returns>NoContent if the update was successful, NotFound if the command doesn't exist</returns>
+    [Authorize(Policy = "UserOnly")]
     [HttpPut("{id}")]
     // [Authorize(Policy = "AdminOnly")]
     public IActionResult UpdateRobotCommand(int id, RobotCommand updatedCommand)
@@ -87,6 +89,7 @@ public class RobotCommandsController : ControllerBase
     /// </summary>
     /// <param name="id">The ID of the robot command to delete</param>
     /// <returns>NoContent if the deletion was successful, NotFound if the command doesn't exist</returns>
+    [Authorize(Policy = "AdminOnly")]
     [HttpDelete("{id}")]
     public IActionResult DeleteRobotCommand(int id)
     {

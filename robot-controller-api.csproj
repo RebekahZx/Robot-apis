@@ -7,8 +7,6 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>robot_controller_api</RootNamespace>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  <DocumentationFile>bin\Debug\net5.0\robot-controller-api.xml</DocumentationFile>
 
     <UserSecretsId>577767af-4123-4d54-8fc3-1a85862ee72a</UserSecretsId>
   </PropertyGroup>
