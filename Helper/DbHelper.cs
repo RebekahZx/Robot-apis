@@ -10,7 +10,7 @@ namespace robot_controller_api.Helper
 
         
         
-            private readonly string _connectionString = "Host=localhost;Username=postgres;Password=12345;Database=sit331";
+            private readonly string _connectionString = robot_controller_api.Persistence.Db.ConnectionString;
         
         
 

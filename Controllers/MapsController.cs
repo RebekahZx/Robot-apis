@@ -48,6 +48,7 @@ public class MapsController : ControllerBase
     }
 
    
+    [Authorize(Policy = "UserOnly")]
     [HttpPost]
     // [Authorize(Policy = "AdminOnly")]
     // [Authorize(Policy = "DeveloperOnly")]
@@ -66,6 +67,7 @@ public class MapsController : ControllerBase
     /// <param name="id">The ID of the map to update</param>
     /// <param name="updatedMap">The updated map data</param>
     /// <returns>No content if successful, NotFound if map doesn't exist</returns>
+    [Authorize(Policy = "UserOnly")]
     [HttpPut("{id}")]
     // [Authorize(Policy = "AdminOnly")]
     public IActionResult UpdateMap(int id, Map updatedMap)
@@ -80,6 +82,7 @@ public class MapsController : ControllerBase
     /// </summary>
     /// <param name="id">The ID of the map to delete</param>
     /// <returns>No content if successful, NotFound if map doesn't exist</returns>
+    [Authorize(Policy = "AdminOnly")]
     [HttpDelete("{id}")]
     // [Authorize(Policy = "AdminOnly")]
     // [Authorize(Policy = "DeveloperOnly")]
